@@ -1,0 +1,104 @@
+<div class="row">
+    <div class="col s12">
+      <div class="card">
+        
+        <div class="card-content white-text">
+          <div class="row">
+            <div class="col s5">
+               
+               <form #byroadForm="ngForm" (ngSubmit)="onSubmit(byroadForm)">
+                <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="byroadService.selectedByroad._id">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="From" #From="ngModel" [(ngModel)]="byroadService.selectedByroad.From" placeholder="Enter the information " required>
+                    <label>From :
+                      <label class="red-text">*</label>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="Destination" #Destination="ngModel" [(ngModel)]="byroadService.selectedByroad.Destination" placeholder="Enter the information" required>
+                    <label>Destination :
+                      <label class="red-text">*</label>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="CarInformation" #CarInformation="ngModel" [(ngModel)]="byroadService.selectedByroad.CarInformation" placeholder="Enter the information" required>
+                    <label>CarInformation :
+                      <label class="red-text">*</label>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="number" name="Price" #Price="ngModel" [(ngModel)]="byroadService.selectedByroad.Price" placeholder="Enter the information" required>
+                    <label>Price :
+                      <label class="red-text">*</label>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="number" name="DepartureTime" #DepartureTime="ngModel" [(ngModel)]="byroadService.selectedByroad.DepartureTime" placeholder="Enter the information" required>
+                    <label>DepartureTime :
+                      <label class="red-text">*</label>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="number" name="Duration" #Duration="ngModel" [(ngModel)]="byroadService.selectedByroad.Duration" placeholder="Enter the information" required>
+                    <label>Duration :
+                      <label class="red-text">*</label>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <button class="btn btn-custom right" type="button" (click)="resetForm(byroadForm)">Reset</button>
+                    <button class="btn btn-custom right" type="submit" [disabled]="!byroadForm.valid">Submit</button>
+                  </div>
+                </div>
+              </form> 
+            </div>
+            <div class="col s7">
+                <table class="responsive-table highlight">
+                    <thead>
+                      <tr>
+                        <th>From</th>
+                        <th>Destination</th>
+                        <th>CarInformation</th>
+                        <th>Price</th>
+                        <th>DepartureTime</th>
+                        <th>Duration</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tr *ngFor="let road of byroadService.Byroads">
+                      <td>{{road.From}}</td>
+                      <td>{{road.Destination}}</td>
+                      <td>{{road.CarInformation}}</td>
+                      <td>{{road.Price}}</td>
+                      <td>{{road.DepartureTime}}</td>
+                      <td>{{road.Duration}}</td>
+                      <td>
+                          <a class="action-btn" (click)="onEdit(road)">
+                            <i class="material-icons">edit</i>
+                          </a>
+                          <a class="action-btn" (click)="onDelete(road._id,byroadForm)">
+                            <i class="material-icons">delete</i>
+                          </a>
+                        </td>
+                    </tr>
+                  </table>
+            </div>
+          </div>
+        </div>
+       </div> 
+    </div>
+  
+  </div> 
+

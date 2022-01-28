@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Book</title>
+<meta charset="utf-8">
+<script type="text/javascript" src="js/jquery-1.5.2.js" ></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/cufon-replace.js"></script>  
+<script type="text/javascript" src="js/Cabin_400.font.js"></script>
+<script type="text/javascript" src="js/tabs.js"></script> 
+<script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
+<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="js/atooltip.jquery.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body id="page3">
+<div class="main">
+<!--header -->
+<header>
+	<div class="wrapper">
+		<h1><a href="index.html" id="logo">Air lines</a></h1>
+		<span id="slogan">Fast, Frequent &amp; Safe Travelling</span>
+	</div>
+	<nav>
+		<ul id="menu">
+		    <li id="menu_active"><a  href="dashbords"><span><span>Dashboard</span></span></a></li>
+			<li><a  href="booktrains"><span><span>Book Trains</span></span></a></li>
+			<li><a  href="books"><span><span>Book Flights</span></span></a></li>
+			<li class="end"><a  href="contacts"><span><span>Contacts</span></span></a></li>
+		</ul>
+	</nav>
+</header><div class="ic">More Website Templates at TemplateMonster.com!</div>
+<!-- / header -->
+<!--content -->
+	<section id="content">
+		<div class="wrapper pad1">
+			<article class="col1">
+				<div class="box1">
+					<h2 class="top">Hot Offers of the Week</h2>
+					<div class="pad">
+						<strong>Birmingham</strong><br>
+						<ul class="pad_bot1 list1">
+							<li><span class="right color1">from GBP 143.-</span><a href="Book2.html">Zurich</a></li>
+						</ul>
+						<strong>London (LCY)</strong><br>
+						<ul class="pad_bot1 list1">
+							<li><span class="right color1">from GBP 176.-</span><a href="Book2.html">Geneva</a></li>
+							<li><span class="right color1">from GBP 109.-</span><a href="Book2.html">Zurich</a></li>
+						</ul>
+						<strong>London (LHR)</strong><br>
+						<ul class="pad_bot2 list1">
+							<li><span class="right color1">from GBP 100.-</span><a href="Book2.html">Geneva</a></li>
+							<li><span class="right color1">from GBP 112.-</span><a href="Book2.html">Zurich</a></li>
+							<li><span class="right color1">from GBP 88.-</span><a href="Book2.html">Basel</a></li>
+						</ul>
+						<strong>Manchester</strong><br>
+						<ul class="pad_bot2 list1">
+							<li><span class="right color1">from GBP 97.-</span><a href="Book2.html">Basel</a></li>
+							<li><span class="right color1">from GBP 103.-</span><a href="Book2.html">Zurich</a></li>
+						</ul>
+						<strong>Edinburgh</strong><br>
+						<ul class="pad_bot2 list1">
+							<li><span class="right color1">from GBP 165.-</span><a href="Book2.html">Zurich</a></li>
+						</ul>
+						<strong>Birmingham</strong><br>
+						<ul class="pad_bot1 list1">
+							<li><span class="right color1">from GBP 143.-</span><a href="Book2.html">Zurich</a></li>
+						</ul>
+						<strong>London (LCY)</strong><br>
+						<ul class="pad_bot1 list1">
+							<li><span class="right color1">from GBP 176.-</span><a href="Book2.html">Geneva</a></li>
+							<li><span class="right color1">from GBP 109.-</span><a href="Book2.html">Zurich</a></li>
+						</ul>
+						<strong>London (LHR)</strong><br>
+						<ul class="pad_bot2 list1">
+							<li><span class="right color1">from GBP 100.-</span><a href="Book2.html">Geneva</a></li>
+							<li><span class="right color1">from GBP 112.-</span><a href="Book2.html">Zurich</a></li>
+							<li><span class="right color1">from GBP 88.-</span><a href="Book2.html">Basel</a></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+			<article class="col2">
+					<div class="tabs2">
+							<ul class="nav">
+								<li class="selected"><a href="#Flight">Destination</a></li>
+							
+							</ul>
+							<div class="content">
+								<div class="tab-content" id="Flight">
+									<form id="form_5" class="form_5" method="post">
+										<div>
+											<div class="pad">
+												<div class="wrapper under">
+													<div class="col1">
+														
+														<div class="row"><span class="left">From</span>
+															<input type="text" name="searchsText" placeholder="Search" [(ngModel)]="searchText">
+														  </div>
+											
+														<div class="row"><span class="left">To</span>
+															<input type="text" class="input">
+															<a href="#" class="help"></a>
+														</div>
+													</div>
+										
+												</div>
+												<div class="wrapper under">
+													
+													<div class="cols marg_right1">
+														<h6>Travelling Date</h6>
+													
+														 
+<form>
+	<label for="dt">Date: </label>
+	 
+	 <input name="dt" type="date"/>
+	 
+	</form>
+													</div>
+													<div class="cols">
+														<h5>Travelling Date</h5>
+										
+	
+														 
+<form>
+	<label for="dt">Date: </label>
+	 
+	 <input name="dt" type="date"/>
+	 
+	</form>
+													</div>
+												</div>
+												<div class="wrapper pad_bot1">
+													<span class="left">Passengers</span>
+													<div class="cols marg_right1">
+														<div class="row">
+															<input type="text" class="input2" value="2"  onblur="if(this.value=='') this.value='2'" onFocus="if(this.value =='2' ) this.value=''">
+															<span class="left">Adults</span>
+															<a href="#" class="help"></a>
+														</div>
+														<div class="row">
+															<input type="text" class="input2" value="0"  onblur="if(this.value=='') this.value='0'" onFocus="if(this.value =='0' ) this.value=''">
+															<span class="left">Children</span>
+															<a href="#" class="help"></a>
+														</div>
+													</div>
+													<div class="cols">
+														<div class="select1"><span class="left">Class</span><select><option>Economy</option></select>
+															<a href="#" class="help"></a>
+														</div>
+														<div class="select1"><span class="left">Airline</span><select><option>Airlines</option></select>
+															<a href="#" class="help"></a>
+														</div>
+													</div>
+													<span class="right relative"><a  class="button1"><strong>Search</strong></a></span>
+													
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
+			</section>
+			<!--content end-->
+			
+			
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+     By Road Trip
+    </div>
+    <div class="card-body">
+  
+  <table id="datatablesSimple">
+  <thead>
+  <tr>
+	<th>ID</th>
+      <th>From</th>
+      <th>Destination</th>
+      <th>CarInformation</th>
+      <th (click)="sort('Price')">Price &nbsp;<i class="fa fa-sort"></i></th>
+      <th>DepartureTime</th>
+      <th (click)="sort('Duration')">Duration &nbsp;<i class="fa fa-sort"></i></th>
+      <th></th>
+  </tr>
+  </thead>
+  <tr *ngFor="let road of byroadService.Byroads | filter:searchText | orderBy: key " >
+    <td><a  [routerLink]="['views', road._id]">{{road._id}}</a></td>
+    <td>{{road.From}}</td>
+    <td>{{road.Destination}}</td>
+    <td>{{road.CarInformation}}</td>
+    <td>{{road.Price}}Rs</td>
+    <td>{{road.DepartureTime}}(Indian Time Zone)</td>
+    <td>{{road.Duration}}hrs</td>
+   
+  </tr>
+  </table>
+  </div>
+  
+	
+					 
+			</div>
+			<!--footer -->
+			<footer>
+				<div class="wrapper">
+					<ul id="icons">
+						<li><a href="#" class="normaltip" title="Facebook"><img src="assets/images/icon1.jpg" alt=""></a></li>
+						<li><a href="#" class="normaltip" title="Delicious"><img src="assets/images/icon2.jpg" alt=""></a></li>
+						<li><a href="#" class="normaltip" title="Stumble Upon"><img src="assets/images/icon3.jpg" alt=""></a></li>
+						<li><a href="#" class="normaltip" title="Twitter"><img src="assets/images/icon4.jpg" alt=""></a></li>
+						<li><a href="#" class="normaltip" title="Linkedin"><img src="assets/images/icon5.jpg" alt=""></a></li>
+						<li><a href="#" class="normaltip" title="Reddit"><img src="assets/images/icon6.jpg" alt=""></a></li>
+					</ul>
+					<div class="links">
+						Designed by <a  href="https://github.com/palak0659?tab=repositories">Palak Talwar</a> <br>
+					</div>
+				</div>
+			</footer>
+		   <!--footer end-->
+		</div>
+<script type="text/javascript"> Cufon.now(); </script>
+<script>
+	jQuery(document).ready(function($) {
+		$('.form_5').jqTransform({imgPath:'jqtransformplugin/img/'});	
+	});
+	$(document).ready(function() {
+		tabs2.init();
+	});
+</script>
+</body>
+</html>

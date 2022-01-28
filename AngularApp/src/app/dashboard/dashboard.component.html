@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-5">
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+   <app-header></app-header>
+    <body>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">No of Flights</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                          {{flightService.flights ? flightService.flights.length : ''}}
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                        
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                             FLIGHTS
+                            </div>
+                            <form>
+                                <div class="form-group">
+                                  <input type="text" name="searchsText" placeholder="Search" [(ngModel)]="searchText">
+                                </div>
+                              </form>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>From</th>
+                                            <th>Destination</th>
+                                            <th>Flightof</th>
+                                            <th (click)="sort('Price')">Price &nbsp;<i class="fa fa-sort"></i></th>
+                                            <th>DepartureTime</th>
+                                            <th (click)="sort('Duration')">Duration &nbsp;<i class="fa fa-sort"></i></th>
+                                            <th></th>
+                                          </tr>
+                                    </thead>
+                                    <tr *ngFor="let fli of flightService.flights | filter:searchText| orderBy: key">
+                                        <td>{{fli.From}}</td>
+                                        <td>{{fli.Destination}}</td>
+                                        <td>{{fli.FlightOf}}</td>
+                                        <td>{{fli.Price}}Rs</td>
+                                        <td>{{fli.DepartureTime}(Indian Time Zone)</td>
+                                        <td>{{fli.Duration}}hrs</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    
+                                
+                                    <app-dashboard-byroad></app-dashboard-byroad>
+                               
+                           
+                       
+                                    <app-dashboard-train></app-dashboard-train>
+                             
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Designed by Palak Talwar</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
+
